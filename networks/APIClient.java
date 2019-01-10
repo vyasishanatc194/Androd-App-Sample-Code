@@ -7,6 +7,14 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+/**
+ * Created by Citrusbug. 
+ * User: Ishan Vyas 
+ * Date: 10/01/19 
+ * Time: 12:00 PM 
+ * Title : Web Service Config
+ * Description : This file will config web service.
+ */
 
 public class APIClient {
 
