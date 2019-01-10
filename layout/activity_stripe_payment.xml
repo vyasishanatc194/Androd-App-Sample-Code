@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/inner_screen_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/content_action_layout" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <com.mysafetynet.customs.MySafetyText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/card_name"
+                            android:textColor="@android:color/black"
+                            app:fontName="@string/fontOpenSansRegular" />
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edtCreditCardName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_checkout"
+                            android:drawableStart="@drawable/ic_person_black_24dp"
+                            android:drawablePadding="5dp"
+                            android:hint="Enter card holder name"
+                            android:inputType="textCapSentences"
+                            android:padding="10dp"
+                            android:textColor="@color/colorHint"
+                            android:textColorHint="@color/colorHint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <com.mysafetynet.customs.MySafetyText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/card_number"
+                            android:textColor="@android:color/black"
+                            app:fontName="@string/fontOpenSansRegular" />
+
+                        <com.mysafetynet.customs.CreditCardEdittext
+                            android:id="@+id/edtCreditCardNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_checkout"
+                            android:drawableStart="@drawable/ic_credit_card_black_24dp"
+                            android:drawablePadding="5dp"
+                            android:hint="Enter card number"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="16"
+                            android:padding="10dp"
+                            android:textColor="@color/colorHint"
+                            android:textColorHint="@color/colorHint" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:weightSum="1">
+
+                        <com.mysafetynet.customs.MySafetyText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="5dp"
+                            android:text="@string/card_month"
+                            android:textColor="@android:color/black"
+                            app:fontName="@string/fontOpenSansRegular" />
+
+                        <com.mysafetynet.customs.MySafetyText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:padding="5dp"
+                            android:text="@string/card_year"
+                            android:textColor="@android:color/white"
+                            app:fontName="@string/fontOpenSansRegular" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/border_checkout">
+
+                            <ImageButton
+                                android:id="@+id/imgbtnMonth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="10dp"
+                                android:background="?selectableItemBackgroundBorderless"
+                                android:contentDescription="@string/description"
+                                app:srcCompat="@drawable/ic_month_black_24dp" />
+
+                            <Spinner
+                                android:id="@+id/spMonth"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/imgbtnMonth"
+                                android:backgroundTint="@android:color/white"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:spinnerMode="dropdown" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/border_checkout">
+
+                            <Spinner
+                                android:id="@+id/spYear"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@android:color/white"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:spinnerMode="dropdown" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+
+                        <com.mysafetynet.customs.MySafetyText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/card_cvv"
+                            android:textColor="@android:color/black"
+                            app:fontName="@string/fontOpenSansRegular" />
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edtCreditCardCvv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_checkout"
+                            android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+                            android:drawablePadding="5dp"
+                            android:hint="Enter CCV number"
+                            android:importantForAutofill="no"
+                            android:inputType="numberPassword"
+                            android:maxLength="3"
+                            android:padding="10dp"
+                            android:textColor="@color/colorHint"
+                            android:textColorHint="@color/colorHint" />
+                    </LinearLayout>
+
+                    <com.mysafetynet.customs.MySafetyButton
+                        android:id="@+id/btnCheckout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/button"
+                        android:text="@string/btnPay"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:fontButtonName="@string/fontOpenSansBold" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

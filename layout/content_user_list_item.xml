@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/layoutImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imvProfile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@drawable/girl" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/layoutArrow"
+        android:layout_toEndOf="@+id/layoutImage"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <com.mysafetynet.customs.MySafetyText
+            android:id="@+id/txtChildName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="Child Name"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            app:fontName="@string/fontOpenSansBold" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.mysafetynet.customs.MySafetyText
+                android:id="@+id/txtChildyear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="10 Year"
+                android:textColor="@color/colorHint"
+                android:textSize="14sp"
+                app:fontName="@string/fontOpenSansRegular" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/colorLine"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <com.mysafetynet.customs.MySafetyText
+                android:id="@+id/txtChildGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Male"
+                android:textColor="@color/colorHint"
+                android:textSize="14sp"
+                app:fontName="@string/fontOpenSansRegular" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutProgrress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.mysafetynet.customs.MySafetyText
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text=""
+                android:textColor="@color/colorHint"
+                android:textSize="14sp"
+                app:fontName="@string/fontOpenSansRegular" />
+
+            <com.mysafetynet.customs.MySafetyText
+                android:id="@+id/txtDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/txtStatus"
+                android:clickable="false"
+                android:focusable="false"
+                android:text=""
+                android:textColor="@color/colorHint"
+                android:textSize="14sp"
+                app:fontName="@string/fontOpenSansRegular" />
+
+            <com.mysafetynet.customs.MySafetyText
+                android:id="@+id/txtChildStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/txtDes"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="In preogress"
+                android:textColor="@color/colorBg"
+                android:textSize="14sp"
+                app:fontName="@string/fontOpenSansBold" />
+
+            <View
+                android:id="@+id/viewPipe"
+                android:layout_width="1dp"
+                android:layout_height="13dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@+id/txtChildStatus"
+                android:background="@color/colorLine"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <com.mysafetynet.customs.MySafetyText
+                android:id="@+id/txtOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/viewPipe"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="Archive"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="14sp"
+                app:fontName="@string/fontOpenSansBold" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_margin="10dp"
+            android:clickable="false"
+            android:contentDescription="@string/description"
+            android:focusable="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/right_side"
+            android:tint="@color/colorForgot" />
+
+    </LinearLayout>
+</RelativeLayout>
